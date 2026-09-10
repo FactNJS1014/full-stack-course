@@ -23,7 +23,7 @@ export interface CodeLineExplanation {
 }
 
 export interface CodeSnippet {
-  language: 'php' | 'typescript' | 'javascript' | 'tsx' | 'sql' | 'json' | 'bash';
+  language: 'php' | 'typescript' | 'javascript' | 'tsx' | 'sql' | 'json' | 'bash' | 'dockerfile' | 'yaml';
   code: string;
   filename?: string;
   highlightLines?: number[];
@@ -173,7 +173,7 @@ export interface Lesson {
   steps: LessonStep[];
   primaryCode?: CodeSnippet;
   demoType?: 'counter' | 'employee-crud' | 'inertia-flow' | 'nestjs-api' | 'react-form' | 'permission-matrix' | 'api-request' | 'none';
-  exercises: ExerciseItem[];
+  exercises?: ExerciseItem[];
   challenge?: ChallengeItem;
   commonMistakes: CommonMistake[];
   quiz: QuizQuestion[];
