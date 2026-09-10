@@ -1,0 +1,6 @@
+{
+  "name": "Laravel React Nest Academy",
+  "description": "Full-Stack Development From Zero to Advanced - Interactive learning platform for Laravel, React 19, Inertia 3, and NestJS.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
