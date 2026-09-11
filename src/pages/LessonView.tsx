@@ -131,7 +131,7 @@ export const LessonView: React.FC = () => {
       <Sidebar currentTrackId={lesson.trackId} className="hidden lg:flex" />
 
       {/* Main Lesson Content Area */}
-      <main className="flex-1 max-w-4xl mx-auto px-4 sm:px-8 py-8 overflow-y-auto">
+      <main className="flex-1 w-full max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-8 overflow-y-auto">
         {/* Breadcrumb Navigation */}
         <div className="flex items-center gap-2 text-xs text-slate-500 mb-4 flex-wrap">
           <Link to="/curriculum" className="hover:text-blue-600 dark:hover:text-blue-400">
@@ -156,7 +156,7 @@ export const LessonView: React.FC = () => {
         </div>
 
         {/* Lesson Header Card */}
-        <div className="bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-800 p-6 shadow-sm mb-8">
+        <div className="bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-800 p-5 sm:p-7 shadow-xs mb-6 sm:mb-8">
           <div className="flex flex-wrap items-center justify-between gap-3 mb-4">
             <div className="flex items-center gap-2">
               <span className="px-3 py-1 rounded-full text-xs font-mono font-bold bg-blue-50 dark:bg-blue-950/60 text-blue-600 dark:text-blue-400 border border-blue-200 dark:border-blue-900">
@@ -248,9 +248,9 @@ export const LessonView: React.FC = () => {
               </h2>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-3.5 sm:gap-4">
               {/* What is it? */}
-              <div className="p-5 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-2xs">
+              <div className="p-4 sm:p-5 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-xs">
                 <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-blue-600 dark:text-blue-400 mb-2">
                   <Sparkles className="w-4 h-4" />
                   <span>{language === 'th' ? '1. อะไรคือสิ่งนี้? (What is it?)' : '1. What is it?'}</span>
@@ -261,7 +261,7 @@ export const LessonView: React.FC = () => {
               </div>
 
               {/* Why use it? */}
-              <div className="p-5 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-2xs">
+              <div className="p-4 sm:p-5 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-xs">
                 <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-emerald-600 dark:text-emerald-400 mb-2">
                   <Zap className="w-4 h-4" />
                   <span>{language === 'th' ? '2. ทำไมต้องใช้? (Why use it?)' : '2. Why use it?'}</span>
@@ -272,7 +272,7 @@ export const LessonView: React.FC = () => {
               </div>
 
               {/* When to use? */}
-              <div className="p-5 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-2xs">
+              <div className="p-4 sm:p-5 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-xs">
                 <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-amber-600 dark:text-amber-400 mb-2">
                   <Clock className="w-4 h-4" />
                   <span>{language === 'th' ? '3. ใช้เมื่อไหร่? (When to use?)' : '3. When to use?'}</span>
@@ -283,7 +283,7 @@ export const LessonView: React.FC = () => {
               </div>
 
               {/* How it works? */}
-              <div className="p-5 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-2xs">
+              <div className="p-4 sm:p-5 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-xs">
                 <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-purple-600 dark:text-purple-400 mb-2">
                   <Target className="w-4 h-4" />
                   <span>{language === 'th' ? '4. ทำงานอย่างไร? (How it works?)' : '4. How it works?'}</span>
@@ -378,10 +378,10 @@ export const LessonView: React.FC = () => {
               {lesson.steps.map(step => (
                 <div
                   key={step.stepNumber}
-                  className="p-5 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-2xs space-y-3"
+                  className="p-4 sm:p-5 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-xs space-y-3"
                 >
                   <div className="flex items-center gap-3">
-                    <span className="w-7 h-7 rounded-lg bg-purple-50 dark:bg-purple-950 text-purple-600 dark:text-purple-400 font-mono font-bold text-xs flex items-center justify-center border border-purple-500/30">
+                    <span className="w-7 h-7 rounded-lg bg-purple-50 dark:bg-purple-950 text-purple-600 dark:text-purple-400 font-mono font-bold text-xs flex items-center justify-center border border-purple-500/30 flex-shrink-0">
                       0{step.stepNumber}
                     </span>
                     <h3 className="text-sm font-bold text-slate-900 dark:text-white">
@@ -389,12 +389,12 @@ export const LessonView: React.FC = () => {
                     </h3>
                   </div>
 
-                  <p className="text-xs text-slate-600 dark:text-slate-300 leading-relaxed pl-10">
+                  <p className="text-xs text-slate-600 dark:text-slate-300 leading-relaxed pl-0 sm:pl-10">
                     {language === 'th' ? step.content.th : step.content.en}
                   </p>
 
                   {step.codeSnippet && (
-                    <div className="mt-3 pl-10">
+                    <div className="mt-3 pl-0 sm:pl-10">
                       <CodeBlock snippet={step.codeSnippet} />
                     </div>
                   )}
@@ -418,7 +418,7 @@ export const LessonView: React.FC = () => {
               {lesson.commonMistakes.map((item, idx) => (
                 <div
                   key={idx}
-                  className="p-5 rounded-2xl border border-rose-200/60 dark:border-rose-900/40 bg-rose-50/30 dark:bg-rose-950/20 space-y-3"
+                  className="p-4 sm:p-5 rounded-2xl border border-rose-200/60 dark:border-rose-900/40 bg-rose-50/30 dark:bg-rose-950/20 space-y-3"
                 >
                   <div className="flex items-start gap-2 text-rose-700 dark:text-rose-400 font-bold text-xs">
                     <AlertTriangle className="w-4 h-4 flex-shrink-0 mt-0.5" />
@@ -470,7 +470,7 @@ export const LessonView: React.FC = () => {
 
         {/* Section 8: Interactive Knowledge Quiz */}
         {lesson.quiz && lesson.quiz.length > 0 && (
-          <section className="mb-10 p-6 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm">
+          <section className="mb-10 p-5 sm:p-7 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-xs">
             <div className="flex items-center justify-between pb-4 border-b border-slate-200 dark:border-slate-800 mb-6">
               <div className="flex items-center gap-2">
                 <Award className="w-5 h-5 text-amber-500" />
@@ -491,7 +491,7 @@ export const LessonView: React.FC = () => {
                 const userSelectedId = selectedAnswers[qIndex];
 
                 return (
-                  <div key={q.id || qIndex} className="p-4 rounded-xl bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 text-xs">
+                  <div key={q.id || qIndex} className="p-3.5 sm:p-4 rounded-xl bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 text-xs">
                     <div className="font-bold text-sm text-slate-900 dark:text-white mb-3 flex items-start gap-2">
                       <span className="text-slate-400 font-mono">Q{qIndex + 1}.</span>
                       <span>{language === 'th' ? q.question.th : q.question.en}</span>
@@ -519,7 +519,7 @@ export const LessonView: React.FC = () => {
                             key={opt.id}
                             onClick={() => handleQuizAnswer(qIndex, opt.id)}
                             disabled={quizSubmitted}
-                            className={`w-full p-3 rounded-xl border text-left transition-all flex items-center justify-between ${styleClasses}`}
+                            className={`w-full p-2.5 sm:p-3 rounded-xl border text-left transition-all flex items-center justify-between ${styleClasses}`}
                           >
                             <span>{language === 'th' ? opt.text.th : opt.text.en}</span>
                             {quizSubmitted && isCorrect && <Check className="w-4 h-4 text-emerald-500" />}
@@ -565,7 +565,7 @@ export const LessonView: React.FC = () => {
 
         {/* Section 9: Key Summary Takeaways */}
         {lesson.summary && (
-          <section className="mb-10 p-6 rounded-2xl bg-gradient-to-r from-blue-50/50 via-indigo-50/30 to-purple-50/50 dark:from-blue-950/20 dark:via-indigo-950/20 dark:to-purple-950/20 border border-blue-200/50 dark:border-blue-900/40">
+          <section className="mb-10 p-5 sm:p-6 rounded-2xl bg-gradient-to-r from-blue-50/50 via-indigo-50/30 to-purple-50/50 dark:from-blue-950/20 dark:via-indigo-950/20 dark:to-purple-950/20 border border-blue-200/50 dark:border-blue-900/40">
             <h3 className="font-bold text-xs uppercase tracking-wider text-blue-600 dark:text-blue-400 mb-3">
               {language === 'th' ? 'สรุปประเด็นสำคัญ (Summary & Takeaways)' : 'Summary & Key Takeaways'}
             </h3>
